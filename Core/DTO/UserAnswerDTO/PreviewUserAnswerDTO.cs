@@ -2,9 +2,8 @@
 
 public class PreviewUserAnswerDTO
 {
-    public int UserTestId { get; set; }
-    public int QuestionId { get; set; }
-    public int ChosenOptionId { get; set; }
-    public bool IsRightAnswer { get; set; }
-    public float Mark { get; set; }
+    public string TestTitle { get; set; }
+    public float MaxResult { get; set; }
+    public float Result { get; set; }
+    public IList<PreviewQuestionDTO> Questions { get; set; }
 }

@@ -17,8 +17,8 @@ public class QuestionController : Controller
         _questionService = questionService;
     }
 
-    [HttpGet("{testId:int}")]
-    public async Task<IList<QuestionDTO>> GetAllQuestionsByTestId(int testId)
+    [HttpGet]
+    public async Task<IList<QuestionDTO>> GetAllQuestionsByTestId([FromQuery] int testId)
     {
         return await _questionService.GetAllQuestionsByTestId(testId);
     }

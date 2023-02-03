@@ -6,5 +6,5 @@ namespace Core.Interfaces.Services;
 public interface IUserAnswerService
 {
     Task SaveUserAnswers(SaveUserAnswersDTO userAnswersDTO);
-    Task<List<PreviewUserAnswerDTO>> GetAllAnswersByUserTestId(int userTestId);
+    Task<PreviewUserAnswerDTO> GetAllAnswersByUserTestId(int userTestId);
 }

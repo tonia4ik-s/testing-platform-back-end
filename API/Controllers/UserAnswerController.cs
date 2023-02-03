@@ -25,8 +25,8 @@ public class UserAnswerController : Controller
         return Ok();
     }
 
-    [HttpGet("{userTestId:int}")]
-    public async Task<List<PreviewUserAnswerDTO>> GetAllAnswersByUserTestId(int userTestId)
+    [HttpGet]
+    public async Task<PreviewUserAnswerDTO> GetAllAnswersByUserTestId([FromQuery] int userTestId)
     {
         return await _userAnswerService.GetAllAnswersByUserTestId(userTestId);
     }
