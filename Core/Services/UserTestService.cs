@@ -48,7 +48,7 @@ public class UserTestService : IUserTestService
 
     public UserTest? GetUserTestById(int id)
     {
-        return _userTestRepository.Query().FirstOrDefault(t => t.Id == id);
+        return _userTestRepository.Query().FirstOrDefault(t => t.Id == id && t.IsFinished == false);
     }
 
     public async Task OnFinishUpdate(UserTest userTest, IList<UserAnswer> userAnswers)
